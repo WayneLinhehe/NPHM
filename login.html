@@ -2,25 +2,27 @@
 
 <script type="text/javascript" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
 <script type="text/javascript">
-	liff.ready.then(() => {
+	
 	  liff
 		.init({
 			liffId: "1657178628-bkVxXrZJ",
 		})
 		.then(() => {
-			if (!liff.isLoggedIn()) {
-			  alert('請先登入才可取得使用者資訊。');
-			}
-			else {
-				alert('你有登入。');
-			}
-			//console.log('1');
-			//liff.login({});
+			liff.ready.then(() => {
+				if (!liff.isLoggedIn()) {
+				  alert('請先登入才可取得使用者資訊。');
+				}
+				else {
+					alert('你有登入。');
+				}
+				//console.log('1');
+				//liff.login({});
+			});
 		})
 		.catch((err) => {
 			console.log(err.code, err.message);
 		});
-	});
+	
 	
 </script>
 
