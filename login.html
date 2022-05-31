@@ -1,6 +1,18 @@
 <html>
 
 <script type="text/javascript" src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
-
+<script type="text/javascript">
+	liff
+	.init({
+		liffId: "1657178628-bkVxXrZJ", // Use own liffId
+	})
+	.then(() => {
+		console.log('1');
+		liff.login({});
+	})
+	.catch((err) => {
+		console.log(err.code, err.message);
+	});
+</script>
 
 </html>
