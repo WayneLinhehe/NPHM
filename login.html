@@ -1,25 +1,36 @@
 <html>
 <head>
 	<script type="text/javascript" src="https://static.line-scdn.net/liff/edge/2/sdk.js">
-		liff
-			.init({
-				liffId: "1657178628-bkVxXrZJ",
-			})
-			.then(() => {
-				liff.ready.then(() => {
-					if (!liff.isLoggedIn()) {
-					  alert('請先登入才可取得使用者資訊。');
-					}
-					else {
-						alert('你有登入。');
-					}
-					//console.log('1');
-					//liff.login({});
+	
+	</script>
+	<script type="text/javascript">
+		document.onreadystatechange = subSomething;
+		function subSomething(){
+			if(document.readyState == "complete"){
+				liff
+				.init({
+					liffId: "1657178628-bkVxXrZJ",
+				})
+				.then(() => {
+					liff.ready.then(() => {
+						if (!liff.isLoggedIn()) {
+						  alert('請先登入才可取得使用者資訊。');
+						}
+						else {
+							alert('你有登入。');
+						}
+						//console.log('1');
+						//liff.login({});
+					});
+				})
+				.catch((err) => {
+					console.log(err.code, err.message);
 				});
-			})
-			.catch((err) => {
-				console.log(err.code, err.message);
-			});
+			}
+		}
+		  
+		
+		
 	</script>
 </head>
 
