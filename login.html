@@ -14,7 +14,7 @@
 				.then(() => {
 					let _context = liff.getContext();
                     if (_context.userId) {
-                        Submit(_context.userId);
+                        alert("已登入");
                     }
                     else {
                         liff.login();
