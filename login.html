@@ -7,6 +7,8 @@
 		document.onreadystatechange = subSomething;
 		function subSomething(){
 			if(document.readyState == "complete"){
+				alert(navigator.userAgent);
+			
 				if (liff.isInClient() || liff.getOS() != "ios"){
 					alert("不是在IOS的環境");
 					document.location.href = "https://waynelinhehe.github.io/NPHM/login.html";
