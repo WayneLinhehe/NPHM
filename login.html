@@ -25,10 +25,14 @@
                         alert("已登入");
                     }
                     else {
+						alert(_context.userId);
+                        alert("登入失敗");
                         liff.login();
                     }
 				})
 				.catch((err) => {
+					alert(err.code);
+					alert(err.message);
 					console.log(err.code, err.message);
 				});
 			}
